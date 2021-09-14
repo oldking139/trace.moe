@@ -2,7 +2,7 @@ version: "3"
 
 services:
   www:
-    image: ghcr.io/soruly/trace.moe-www:latest
+    image: oldking139/trace.moe-www:no-anilist-03
     restart: unless-stopped
     environment:
       - NEXT_PUBLIC_API_ENDPOINT=${NEXT_PUBLIC_API_ENDPOINT}
@@ -24,7 +24,7 @@ services:
         target: /mnt/
 
   api:
-    image: ghcr.io/soruly/trace.moe-api:latest
+    image: oldking139/trace.moe-api:01
     depends_on:
       - redis
       - mariadb
